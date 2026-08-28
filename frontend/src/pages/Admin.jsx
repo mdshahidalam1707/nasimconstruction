@@ -4,6 +4,7 @@ import {
   LayoutDashboard,
   Building2,
   Phone,
+  Mail,
   MapPin,
   Users,
   Briefcase,
