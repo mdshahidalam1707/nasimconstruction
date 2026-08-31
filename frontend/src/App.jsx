@@ -27,12 +27,60 @@ import ProjectModal from "./components/ProjectModal";
 import FloatingActions from "./components/FloatingActions";
 import { useSiteData } from "./context/SiteContext";
 
-// Scroll to top helper on navigation
+// Scroll to top & SEO title/canonical helper on navigation
 function ScrollToTop() {
   const { pathname } = useLocation();
+
   useEffect(() => {
     window.scrollTo(0, 0);
+
+    const routeMeta = {
+      "/": {
+        title: "Nasim Constructions & Works | Construction Company in Hajipur, Bihar",
+        canonical: "https://nasimconstruction.in/"
+      },
+      "/services": {
+        title: "Construction & Civil Contracting Services | Nasim Constructions & Works - Hajipur, Bihar",
+        canonical: "https://nasimconstruction.in/services"
+      },
+      "/projects": {
+        title: "Completed Projects Portfolio | Nasim Constructions & Works - Hajipur, Bihar",
+        canonical: "https://nasimconstruction.in/projects"
+      },
+      "/about": {
+        title: "About Us | Nasim Constructions & Works - Hajipur, Bihar",
+        canonical: "https://nasimconstruction.in/about"
+      },
+      "/contact": {
+        title: "Contact Us | Nasim Constructions & Works - Hajipur, Bihar",
+        canonical: "https://nasimconstruction.in/contact"
+      },
+      "/admin": {
+        title: "Admin Dashboard | Nasim Constructions & Works",
+        canonical: "https://nasimconstruction.in/admin"
+      },
+      "/crm": {
+        title: "CRM Dashboard | Nasim Constructions & Works",
+        canonical: "https://nasimconstruction.in/crm"
+      }
+    };
+
+    const current = routeMeta[pathname] || {
+      title: "Nasim Constructions & Works | Construction Company in Hajipur, Bihar",
+      canonical: `https://nasimconstruction.in${pathname}`
+    };
+
+    document.title = current.title;
+
+    let canonicalTag = document.querySelector('link[rel="canonical"]');
+    if (!canonicalTag) {
+      canonicalTag = document.createElement("link");
+      canonicalTag.setAttribute("rel", "canonical");
+      document.head.appendChild(canonicalTag);
+    }
+    canonicalTag.setAttribute("href", current.canonical);
   }, [pathname]);
+
   return null;
 }
 
