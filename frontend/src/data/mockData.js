@@ -259,19 +259,64 @@ export const PROJECTS_DATA = [
   }
 ];
 
-export const BEFORE_AFTER_DATA = {
-  title: "Live Transformation: Old House to Modern Villa",
-  subtitle: "See how we transformed a 30-year-old traditional brick home in Hajipur into a modern architectural luxury villa.",
-  beforeImg: "https://images.unsplash.com/photo-1584463699031-64859a519890?auto=format&fit=crop&w=1000&q=80",
-  afterImg: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80",
-  beforeLabel: "Before: Raw / Dated Structure",
-  afterLabel: "After: Nasim Completed Villa",
-  stats: [
-    { label: "Completion Time", val: "4.5 Months" },
-    { label: "Cost Savings", val: "22% vs Rebuild" },
-    { label: "Structural Life", val: "+50 Years Added" }
-  ]
-};
+export const BEFORE_AFTER_PROJECTS = [
+  {
+    id: "villa-elevation",
+    tabTitle: "Residential Villa Elevation",
+    badge: "Turnkey Exterior & Structural Remodel",
+    title: "Dated Brick House to Luxury Modern Villa",
+    subtitle: "Complete structural renovation, elevation remodelling, and seismic reinforcement delivered in Hajipur.",
+    beforeImg: "/transformations/villa-before.jpg",
+    afterImg: "/transformations/villa-after.jpg",
+    beforeLabel: "Before: Dated Brick Structure",
+    afterLabel: "After: Completed Modern Villa",
+    location: "Fatehabad, Hajipur",
+    stats: [
+      { label: "Execution Time", val: "4.5 Months" },
+      { label: "Cost Savings", val: "28% vs Demolish" },
+      { label: "RCC Structure", val: "Earthquake-Resistant Zone IV" },
+      { label: "Warranty", val: "10-Year Guarantee" }
+    ]
+  },
+  {
+    id: "interior-remodel",
+    tabTitle: "Luxury Living Room Interior",
+    badge: "Bespoke Interior Contracting",
+    title: "Raw Brick Space to Luxury Living Room",
+    subtitle: "From naked RCC columns and raw brickwork to polished Italian marble flooring, oak fluted panels, and ambient cove lighting.",
+    beforeImg: "/transformations/interior-before.jpg",
+    afterImg: "/transformations/interior-after.jpg",
+    beforeLabel: "Before: Bare RCC & Brickwork",
+    afterLabel: "After: Luxury Italian Marble Finish",
+    location: "Anwar Residential, Patna",
+    stats: [
+      { label: "Execution Time", val: "45 Days" },
+      { label: "Flooring", val: "Italian Botticino Marble" },
+      { label: "Lighting", val: "Warm 3000K Architectural LED" },
+      { label: "Carpentry", val: "Marine-Grade Teak Finish" }
+    ]
+  },
+  {
+    id: "commercial-remodel",
+    tabTitle: "Commercial Hub & Showroom",
+    badge: "Civil Facade Overhaul",
+    title: "Dated Market Complex to Modern Showroom Hub",
+    subtitle: "Structural strengthening, ACP panel cladding, tinted glass curtain walls, and contemporary retail entrance.",
+    beforeImg: "/transformations/commercial-before.jpg",
+    afterImg: "/transformations/commercial-after.jpg",
+    beforeLabel: "Before: Weathered Faded Complex",
+    afterLabel: "After: Modern ACP & Curtain Wall Facade",
+    location: "Rajendra Chowk Commercial Hub, Hajipur",
+    stats: [
+      { label: "Execution Time", val: "3.5 Months" },
+      { label: "Commercial Value", val: "+65% Rental Valuation" },
+      { label: "Facade Standard", val: "Grade 304 ACP & Toughened Glass" },
+      { label: "Schedule", val: "100% On-Time Handover" }
+    ]
+  }
+];
+
+export const BEFORE_AFTER_DATA = BEFORE_AFTER_PROJECTS[0];
 
 export const STATS_DATA = [
   { value: "10+", label: "Years Experience", subtext: "Established 2016 in Bihar" },
