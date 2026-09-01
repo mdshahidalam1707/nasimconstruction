@@ -528,9 +528,9 @@ export default function Admin() {
             <div className="space-y-4 pt-4 border-t border-slate-200">
               <h3 className="text-sm font-bold text-amber-700 uppercase tracking-wider flex items-center gap-2">
                 <Users className="w-4 h-4" />
-                Founders & Ownership Details
+                Founder & Ownership Details
               </h3>
-              <div className="grid sm:grid-cols-2 gap-5">
+              <div className="space-y-5 max-w-2xl">
                 {/* Founder */}
                 <div className="p-5 rounded-2xl bg-amber-50 border border-amber-200 space-y-3">
                   <h4 className="text-xs font-bold text-amber-800 uppercase">
@@ -563,7 +563,7 @@ export default function Admin() {
                       Bio / Role Description
                     </label>
                     <textarea
-                      rows={2}
+                      rows={3}
                       value={formData.founderBio}
                       onChange={(e) => setFormData({ ...formData, founderBio: e.target.value })}
                       className="w-full px-3 py-2 rounded-lg bg-white border border-slate-300 text-slate-900 text-xs font-medium focus:outline-none focus:border-amber-500"
@@ -571,47 +571,7 @@ export default function Admin() {
                   </div>
                 </div>
 
-                {/* Co-Founder */}
-                <div className="p-5 rounded-2xl bg-blue-50 border border-blue-200 space-y-3">
-                  <h4 className="text-xs font-bold text-blue-800 uppercase">
-                    Co-Founder / Co-Owner
-                  </h4>
-                  <div>
-                    <label className="block text-xs font-bold mb-1 text-slate-700">
-                      Full Name
-                    </label>
-                    <input
-                      type="text"
-                      value={formData.coFounderName}
-                      onChange={(e) => setFormData({ ...formData, coFounderName: e.target.value })}
-                      className="w-full px-3 py-2 rounded-lg bg-white border border-slate-300 text-slate-900 text-sm font-medium focus:outline-none focus:border-amber-500"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-xs font-bold mb-1 text-slate-700">
-                      Title / Designation
-                    </label>
-                    <input
-                      type="text"
-                      value={formData.coFounderTitle}
-                      onChange={(e) => setFormData({ ...formData, coFounderTitle: e.target.value })}
-                      className="w-full px-3 py-2 rounded-lg bg-white border border-slate-300 text-slate-900 text-sm font-medium focus:outline-none focus:border-amber-500"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-xs font-bold mb-1 text-slate-700">
-                      Bio / Role Description
-                    </label>
-                    <textarea
-                      rows={2}
-                      value={formData.coFounderBio}
-                      onChange={(e) => setFormData({ ...formData, coFounderBio: e.target.value })}
-                      className="w-full px-3 py-2 rounded-lg bg-white border border-slate-300 text-slate-900 text-xs font-medium focus:outline-none focus:border-amber-500"
-                    />
-                  </div>
-                </div>
-
-                <div className="sm:col-span-2">
+                <div>
                   <label className="block text-xs font-bold mb-1 text-slate-700">
                     Experience Badge Text
                   </label>

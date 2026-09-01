@@ -120,7 +120,7 @@ function About() {
             transition={{ delay: 0.2 }}
             className="mt-4 text-slate-700 text-base sm:text-lg leading-relaxed"
           >
-            Founded by <strong className="text-amber-700 font-bold">{settings.founderName || "Mohammad Nasim"}</strong> ({settings.founderTitle || "Owner & Founder"}) and Co-Founded by <strong className="text-slate-950 font-bold">{settings.coFounderName || "Md Shahid Alam"}</strong> ({settings.coFounderTitle || "Co-Owner & Co-Founder"}), Nasim Constructions & Works has been proudly serving clients for the last 10+ years across Hajipur and nearby areas with trusted turnkey building construction, architectural planning, and structural engineering.
+            Founded and led by <strong className="text-amber-700 font-bold">{settings.founderName || "Mohammad Nasim"}</strong> ({settings.founderTitle || "Owner & Founder"}), Nasim Constructions & Works has been proudly serving clients for the last 10+ years across Hajipur and nearby areas with trusted turnkey building construction, architectural planning, and structural engineering.
           </motion.p>
         </div>
 
@@ -269,48 +269,32 @@ function About() {
               Company Leadership
             </div>
             <h3 className="text-2xl sm:text-3xl font-display font-bold text-slate-950">
-              Meet Our <span className="text-gradient-gold">Founders & Leadership</span>
+              Meet Our <span className="text-gradient-gold">Founder & Leadership</span>
             </h3>
             <p className="text-xs sm:text-sm text-slate-600 mt-2">
               Steering engineering precision, architectural innovation, and client trust for over 10 years in Hajipur and nearby areas.
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            <div className="p-6 bg-slate-50 rounded-2xl border border-slate-200 space-y-3 hover:border-amber-500 transition-all group shadow-sm">
-              <div className="w-12 h-12 rounded-xl bg-amber-100 text-amber-700 border border-amber-300 flex items-center justify-center font-display font-bold text-xl group-hover:scale-105 transition-transform">
+          <div className="max-w-2xl mx-auto">
+            <div className="p-8 bg-slate-50 rounded-3xl border border-slate-200 space-y-4 hover:border-amber-500 transition-all group shadow-sm text-center sm:text-left flex flex-col sm:flex-row items-center gap-6">
+              <div className="w-20 h-20 rounded-2xl bg-amber-100 text-amber-700 border-2 border-amber-300 flex items-center justify-center font-display font-black text-2xl group-hover:scale-105 transition-transform flex-shrink-0 shadow-inner">
                 MN
               </div>
-              <div>
-                <h4 className="font-display font-bold text-slate-950 text-lg group-hover:text-amber-700 transition-colors">
-                  {settings.founderName || "Mohammad Nasim"}
-                </h4>
-                <p className="text-xs text-amber-700 font-bold uppercase tracking-wider">
-                  {settings.founderTitle || "Owner & Founder"}
+              <div className="space-y-2 flex-1">
+                <div>
+                  <h4 className="font-display font-bold text-slate-950 text-xl group-hover:text-amber-700 transition-colors">
+                    {settings.founderName || "Mohammad Nasim"}
+                  </h4>
+                  <p className="text-xs text-amber-700 font-bold uppercase tracking-wider">
+                    {settings.founderTitle || "Owner & Founder"}
+                  </p>
+                </div>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
+                  {settings.founderBio ||
+                    "Guiding company vision, civil contracting operations, and turnkey project execution across Hajipur and nearby regions with 10+ years of hands-on structural expertise."}
                 </p>
               </div>
-              <p className="text-xs text-slate-600 leading-relaxed font-medium">
-                {settings.founderBio ||
-                  "Guiding company vision, civil contracting operations, and turnkey project execution across Hajipur and nearby regions with 10+ years of hands-on structural expertise."}
-              </p>
-            </div>
-
-            <div className="p-6 bg-slate-50 rounded-2xl border border-slate-200 space-y-3 hover:border-blue-500 transition-all group shadow-sm">
-              <div className="w-12 h-12 rounded-xl bg-blue-100 text-blue-700 border border-blue-300 flex items-center justify-center font-display font-bold text-xl group-hover:scale-105 transition-transform">
-                SA
-              </div>
-              <div>
-                <h4 className="font-display font-bold text-slate-950 text-lg group-hover:text-blue-700 transition-colors">
-                  {settings.coFounderName || "Md Shahid Alam"}
-                </h4>
-                <p className="text-xs text-blue-700 font-bold uppercase tracking-wider">
-                  {settings.coFounderTitle || "Co-Owner & Co-Founder"}
-                </p>
-              </div>
-              <p className="text-xs text-slate-600 leading-relaxed font-medium">
-                {settings.coFounderBio ||
-                  "Spearheading modern architectural planning, digital site monitoring, client relationships, and quality management across Hajipur, Vaishali, and neighboring districts."}
-              </p>
             </div>
           </div>
         </div>

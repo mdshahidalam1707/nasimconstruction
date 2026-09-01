@@ -31,9 +31,6 @@ const DEFAULT_SETTINGS = {
   founderName: "Mohammad Nasim",
   founderTitle: "Owner & Founder",
   founderBio: "Guiding company vision, civil contracting operations, and turnkey project execution across Hajipur and nearby regions with 10+ years of hands-on structural expertise.",
-  coFounderName: "Md Shahid Alam",
-  coFounderTitle: "Co-Owner & Co-Founder",
-  coFounderBio: "Spearheading modern architectural planning, digital site monitoring, client relationships, and quality management across Hajipur, Vaishali, and neighboring districts.",
   phonePrimary: "+91 85072 18492",
   phoneSecondary: "+91 9709797714",
   whatsappNumber: "918507218492",
@@ -49,7 +46,15 @@ export function SiteProvider({ children }) {
   const [settings, setSettings] = useState(() => {
     const saved = localStorage.getItem(STORAGE_KEYS.SETTINGS);
     if (saved) {
-      try { return { ...DEFAULT_SETTINGS, ...JSON.parse(saved) }; } catch (e) { console.error(e); }
+      try {
+        const parsed = JSON.parse(saved);
+        delete parsed.coFounderName;
+        delete parsed.coFounderTitle;
+        delete parsed.coFounderBio;
+        return { ...DEFAULT_SETTINGS, ...parsed };
+      } catch (e) {
+        console.error(e);
+      }
     }
     return DEFAULT_SETTINGS;
   });

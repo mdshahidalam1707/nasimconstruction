@@ -40,13 +40,9 @@ export default function Footer() {
 
             {/* Leadership & Founder Details Card */}
             <div className="p-3.5 bg-white rounded-2xl border border-slate-200 space-y-2 text-xs shadow-sm">
-              <div className="flex items-center justify-between border-b border-slate-100 pb-1.5">
+              <div className="flex items-center justify-between">
                 <span className="text-slate-500 font-medium">{settings.founderTitle || "Founder & Owner"}:</span>
                 <span className="text-amber-600 font-bold">{settings.founderName || "Mohammad Nasim"}</span>
-              </div>
-              <div className="flex items-center justify-between">
-                <span className="text-slate-500 font-medium">{settings.coFounderTitle || "Co-Founder & Co-Owner"}:</span>
-                <span className="text-slate-900 font-semibold">{settings.coFounderName || "Md Shahid Alam"}</span>
               </div>
               <div className="text-[11px] text-amber-700 pt-0.5 flex items-center gap-1.5 font-semibold">
                 <Clock className="w-3.5 h-3.5 text-amber-600 flex-shrink-0" />
@@ -200,8 +196,6 @@ export default function Footer() {
           </div>
           <p className="flex flex-wrap items-center justify-center gap-2 text-slate-600">
             <span>{settings.founderTitle || "Founder & Owner"}: <strong className="text-amber-700 font-bold">{settings.founderName || "Mohammad Nasim"}</strong></span>
-            <span>•</span>
-            <span>{settings.coFounderTitle || "Co-Founder"}: <strong className="text-slate-900 font-bold">{settings.coFounderName || "Md Shahid Alam"}</strong></span>
           </p>
         </div>
       </div>
