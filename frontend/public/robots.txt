@@ -4,4 +4,3 @@ Disallow: /admin
 Disallow: /crm
 
 Sitemap: https://nasimconstruction.in/sitemap.xml
-Sitemap: https://www.nasimconstruction.in/sitemap.xml

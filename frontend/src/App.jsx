@@ -72,13 +72,18 @@ function ScrollToTop() {
 
     document.title = current.title;
 
-    let canonicalTag = document.querySelector('link[rel="canonical"]');
-    if (!canonicalTag) {
-      canonicalTag = document.createElement("link");
-      canonicalTag.setAttribute("rel", "canonical");
-      document.head.appendChild(canonicalTag);
+    const canonicalTags = document.querySelectorAll('link[rel="canonical"]');
+    if (canonicalTags.length > 0) {
+      canonicalTags[0].setAttribute("href", current.canonical);
+      for (let i = 1; i < canonicalTags.length; i++) {
+        canonicalTags[i].remove();
+      }
+    } else {
+      const newTag = document.createElement("link");
+      newTag.setAttribute("rel", "canonical");
+      newTag.setAttribute("href", current.canonical);
+      document.head.appendChild(newTag);
     }
-    canonicalTag.setAttribute("href", current.canonical);
   }, [pathname]);
 
   return null;

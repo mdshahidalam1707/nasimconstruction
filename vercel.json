@@ -20,6 +20,19 @@
       ]
     }
   ],
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.nasimconstruction.in"
+        }
+      ],
+      "destination": "https://nasimconstruction.in/:path*",
+      "permanent": true
+    }
+  ],
   "services": {
     "frontend": {
       "root": "frontend",
